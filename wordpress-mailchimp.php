@@ -33,11 +33,11 @@ function wordpress_mailchimp_shortcode($atts) {
                         var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
                         if(val != '' && rv_email.test(val)) {
                             $(this).addClass('not_error');
-                            $(this).next('.error-box').text('Принято')
+                            $(this).next('.error-box').text('OK!')
                                 .css('color','green')
                         } else {
                             $(this).removeClass('not_error').addClass('error');
-                            $(this).next('.error-box').html('&bull; поле "Email" обязательно для заполнения<br> &bull; поле должно содержать правильный email-адрес<br> (например: example123@mail.ru)')
+                            $(this).next('.error-box').html('Field "E Mail" is required <br> field must contain a valid email-address <br> (example: example123@mail.ru)')
                                 .css('color','red')
                         }
                         break;
